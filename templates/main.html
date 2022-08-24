@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Cardiovascular Risk Prediction</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits chances of having heart Disease or not</p><br>
+        <p>(Note:This model is 88% accurate)</p>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+      
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Your age.."><br>
+
+
+        <label for="glucose">Glucose</label>
+        <input type="text" id="glucose" name="glucose" placeholder=""><br>
+
+
+
+        <label for="BMI">Body Mass Index(BMI)</label>
+        <input type="text" id="BMI" name="BMI" placeholder=""><br>
+
+
+
+        <label for="diaBP">Diastolic blood pressure </label>
+        <input type="text" id="diaBP" name="diaBP" placeholder=""><br>
+
+
+
+        <label for="sysBP">Systolic blood pressure</label>
+        <input type="text" id="sysBP" name="sysBP" placeholder=""><br>
+
+
+
+        <label for="cigsPerDay">Number of cigarettes per day</label>
+        <input type="text" id="cigsPerDay" name="cigsPerDay" placeholder=""><br> 
+		
+		
+		<label for="totChol">Total cholesterol level</label>
+        <input type="text" id="totChol" name="totChol" placeholder=""><br>
+                          
+
+      
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/Manoj-Korukonda/Cardiovascular-Deployment"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/manoj-korukonda/"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Manoj Korukonda.</p>
+  </div>
+
+</body>
+
+</html>
